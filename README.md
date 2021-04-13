@@ -1,12 +1,6 @@
 # ![ubcdown](/Images/ubc_logo.png)
 
-This repository provides a template for writing a PhD dissertation in R Markdown, and rendering those files into a PDF formatted according to [the requirements of the Faculty of Graduate and Postdoctoral Studies of the University of British Columbia](https://www.grad.ubc.ca/current-students/dissertation-thesis-preparation). It follows the 2021 requirements to convert R Markdown files into a PDF formatted ready for submission at UBC. This project has drawn directly on code and ideas from Dan Ovand's [gauchodown](https://github.com/DanOvando/gauchodown), with  the modifications needed to deal with UBC's G+PS requirements. However, unlike [gouchodown](https://github.com/DanOvando/gauchodown), this is not a package but a repository that you download and modify with your information. In addition, this repository was possible thanks to:
-
--[huskydown](https://github.com/benmarwick/huskydown)
-
--[thesisdown](https://github.com/ismayc/thesisdown) 
-
--[bookdown](https://github.com/rstudio/bookdown)
+This repository provides a template for writing a PhD dissertation in R Markdown, and rendering those files into a PDF formatted according to [the requirements of the Faculty of Graduate and Postdoctoral Studies of the University of British Columbia](https://www.grad.ubc.ca/current-students/dissertation-thesis-preparation). Note that this is not an **official** template and thus, does not guarantee a successful submission. It follows the 2021 requirements to convert R Markdown files into a PDF formatted ready for submission at UBC. The faculty of G+PS has a relative felxible format so, as a reference, the current tamplate will generate a PDF similar to [Palacios-Abrantes, 2021](https://open.library.ubc.ca/cIRcle/collections/ubctheses/24/items/1.0396646). This project has drawn directly on code and ideas from Dan Ovando's [gauchodown](https://github.com/DanOvando/gauchodown), with  the modifications needed to deal with UBC's G+PS requirements. However, unlike `gouchodown`, this is not a package but a repository that you download and modify with your information. In addition, this repository relys hevilly on [bookdown](https://github.com/rstudio/bookdown)
 
 
 Currently, the repository only renders a fully eddited PDF as required by G+PS and I have no plans to expand this in the future. The word version is usefull for revisions and keeping track changes, but it does not render a final version.
@@ -146,7 +140,7 @@ These are the Rmd files for each *global* chapter in your dissertation. Write yo
 
 ## Related projects
 
-This project has drawn directly on code and ideas from Dan Ovand's [gauchodown](https://github.com/DanOvando/gauchodown).
+This project has drawn directly on code and ideas from Dan Ovando's [gauchodown](https://github.com/DanOvando/gauchodown).
 
 Other relevant projects include:
 
