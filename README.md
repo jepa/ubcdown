@@ -1,9 +1,9 @@
 # ![ubcdown](/Images/ubc_logo.png)
 
-This repository provides a template for writing a PhD dissertation in R Markdown, and rendering those files into a PDF formatted according to [the requirements of the Faculty of Graduate and Postdoctoral Studies of the University of British Columbia](https://www.grad.ubc.ca/current-students/dissertation-thesis-preparation). Note that this is not an **official** template and thus, does not guarantee a successful submission. It follows the 2021 requirements to convert R Markdown files into a PDF formatted ready for submission at UBC. The faculty of G+PS has a relative felxible format so, as a reference, the current tamplate will generate a PDF similar to [Palacios-Abrantes, 2021](https://open.library.ubc.ca/cIRcle/collections/ubctheses/24/items/1.0396646). This project has drawn directly on code and ideas from Dan Ovando's [gauchodown](https://github.com/DanOvando/gauchodown), with  the modifications needed to deal with UBC's G+PS requirements. However, unlike `gouchodown`, this is not a package but a repository that you download and modify with your information. In addition, this repository relys hevilly on [bookdown](https://github.com/rstudio/bookdown)
+This repository provides a template for writing a PhD dissertation in R Markdown, and rendering those files into a PDF formatted according to [the requirements of the Faculty of Graduate and Postdoctoral Studies of the University of British Columbia](https://www.grad.ubc.ca/current-students/dissertation-thesis-preparation). Note that this is not an **official** template and thus, does not guarantee a successful submission. It follows the 2021 requirements to convert R Markdown files into a PDF formatted ready for submission at UBC. The faculty of G+PS has a relative felxible format so, as a reference, the current template will generate a PDF similar to [Palacios-Abrantes, 2021](https://open.library.ubc.ca/cIRcle/collections/ubctheses/24/items/1.0396646). This project has drawn directly on code and ideas from Dan Ovando's [gauchodown](https://github.com/DanOvando/gauchodown), with  the modifications needed to deal with UBC's G+PS requirements. However, unlike `gouchodown`, this is not a package but a repository that you download and modify with your information. In addition, this repository relay's heavily on [bookdown](https://github.com/rstudio/bookdown)
 
 
-Currently, the repository only renders a fully eddited PDF as required by G+PS and I have no plans to expand this in the future. The word version is usefull for revisions and keeping track changes, but it does not render a final version.
+Currently, the repository only renders a fully edited PDF as required by G+PS and I have no plans to expand this in the future. The word version is useful for revisions and keeping track changes, but it does not render a final version.
 
 If you are new to working with `bookdown` and `rmarkdown`, please read over the documentation available in gauchodown PDF template (which you can create by following the simple instructions below) and the [bookdown book](https://bookdown.org/yihui/bookdown/).
 
@@ -36,19 +36,19 @@ install.packages("bookdown")
 
 ### Your thesis structure
 
-At this point you already `forked` this repository to your own github or download the zip file to your computer and got yourself a nice looking repo with a `main_script.Rmd` file. This is the main script of your disserttation (see below). In addition you will see the following structure (se below for detailed instructions of each section):
+At this point you already `forked` this repository to your own github or download the zip file to your computer and got yourself a nice looking repo with a `main_script.Rmd` file. This is the main script of your dissertation (see below). In addition you will see the following structure (se below for detailed instructions of each section):
 
 - Images; This folder is intended to have any image you will use *outside* your main chapters (e.g., figures of the introduction)
 
-- Reference; this is where you will store your bibliograohy and the reference guideline. Note that, as of March of 2021, G+PS does not require an [specific reference style](https://www.grad.ubc.ca/current-students/dissertation-thesis-preparation). 
+- Reference; this is where you will store your bibliography and the reference guideline. Note that, as of March of 2021, G+PS does not require an [specific reference style](https://www.grad.ubc.ca/current-students/dissertation-thesis-preparation). 
 
   - *reference_format.csl*; This is the bibliography guiding file. The default is [harvard style](https://www.mendeley.com/guides/harvard-citation-guide). If you want to change the format, Zotero provides a [list](https://www.zotero.org/styles) of referencing styles you can download. Just make sure you keep the file name `reference_format.csl`
 
-  - *reference_list.bib*; This file contains your bibliography. I just exported a bibliogrphy from my reference-library program (e.g., Zotero, mendeley) as a `.bib` file. Alternativeley, you can copy the reference foramt to your clipboard and pasted it here. 
+  - *reference_list.bib*; This file contains your bibliography. I just exported a bibliography from my reference-library program (e.g., Zotero, Mendeley) as a `.bib` file. Alternatively, you can copy the reference format to your clipboard and pasted it here. 
 
 - Sections; Here you will find each of the [sections](https://www.grad.ubc.ca/current-students/dissertation-thesis-preparation/structure-theses-dissertations) of the dissertation according to UBC GP+s. Note that some of them (e.g., glossary) are optional. 
 
-- Data; This repository is inteded to store any data needed for rendering the thesis. I strongly suggest you not to have any heavy data files in here. Github will allow you to have up to 2Mb with the [Git Large Files](https://git-lfs.github.com/) plug-in, but anything larget than that should be outside this project.
+- Data; This repository is intended to store any data needed for rendering the thesis. I strongly suggest you not to have any heavy data files in here. Github will allow you to have up to 2Mb with the [Git Large Files](https://git-lfs.github.com/) plug-in, but anything larger than that should be outside this project.
 
 ### Day-to-day writing of your thesis 
 
@@ -56,11 +56,11 @@ You need to edit the individual chapter R Markdown files to write your thesis bu
 
 While writing, you should `git commit` your work frequently, after every major activity on your thesis. For example, every few paragraphs or section of text, and after major step of analysis development. You should `git push` at the end of each work session before you leave your computer or change task. For gentle novice-friendly guide to getting starting with using Git with R and RStudio, see <http://happygitwithr.com/>.
 
-The main script of your thesis is the `main_script.Rmd` file. This file calls all other sections and builds the final PDF. Note that there are some *few* parts of this script that need modification (e.g., Chapter titles). The "general" disseration sections (e.g., abstract, acknowledgements, introduction), that is, those that are not data chapters, can be found in the `Sections` folder. Each Data chapter is called with the `knitr::knit_child` function (see below).
+The main script of your thesis is the `main_script.Rmd` file. This file calls all other sections and builds the final PDF. Note that there are some *few* parts of this script that need modification (e.g., Chapter titles). The "general" dissertation sections (e.g., abstract, acknowledgements, introduction), that is, those that are not data chapters, can be found in the `Sections` folder. Each Data chapter is called with the `knitr::knit_child` function (see below).
 
 #### Organizing with `knitr::knit_child`
 
-You can certainly use the same project to house all of the data and code for each of your chapters (and if your analysis runs fast enough you could of course simply do all of your analysis and writing for a chapter in the .Rmd for that chapter). In my experience, I had one R-project *per* chapter which I then knitted together for the final dissertation. Here is an explanation, copied directly from Dan Ovando of `gauchodown`, as I conuld't to better:
+You can certainly use the same project to house all of the data and code for each of your chapters (and if your analysis runs fast enough you could of course simply do all of your analysis and writing for a chapter in the .Rmd for that chapter). In my experience, I had one R-project *per* chapter which I then knitted together for the final dissertation. Here is an explanation, copied directly from Dan Ovando of `gauchodown`, as I couldn't to better:
 
 *My dissertation had three chapters. For each chapter, I created a separate RStudio project and folder on my computer, call it "~/PhD/zissou" (I nickname all my projects). Inside that folder I stored the data, code, and paper .Rmd for the `zissou` chapter. When I wanted to actually knit the dissertation, rather than copy-and-pasting all the required results or data from `zissou` over to my `dissertation` folder, I simply used `knit_child` (and some voodoo in the chunk options).*
 
@@ -76,7 +76,7 @@ The following components are the ones you should edit to customize your thesis:
 
 ### `main_script.Rmd`
 
-This is the main configuration file for your thesis. It provides the main structure of your thesis and have *some* regions that require modifications. The main sections where you need to modify the file are identified with the label `<!-- Modify me! -->` right above the section. These include the Title of each data chapter and the title of each Apendix.
+This is the main configuration file for your thesis. It provides the main structure of your thesis and have *some* regions that require modifications. The main sections where you need to modify the file are identified with the label `<!-- Modify me! -->` right above the section. These include the Title of each data chapter and the title of each Appendix.
 
 #### Data Chapters
 The basic structure has Four data chapters. If you have more than four data chapters, you can copy and paste the format below after chapter four, (note that for each new chapter you need to change the Title, the figure, and the table numbers):
@@ -96,11 +96,11 @@ The basic structure has Four data chapters. If you have more than four data chap
 
 ```
 
-Adittionally, if you have less than four data chapters you can just comment out the last chapter and set the child option to `eval = F`. Alternativeley you can just errase the chapter info in the main script.
+Additionally, if you have less than four data chapters you can just comment out the last chapter and set the child option to `eval = F`. Alternatively you can just erase the chapter info in the main script.
 
 #### Appendices
 
-The basic structure has one appendix for each data chapter. So, for each chapter you also need to createan apendix section as detailed above. Below is the form.
+The basic structure has one appendix for each data chapter. So, for each chapter you also need to create the appendix section as detailed above. Below is the form.
 
 
 ```
@@ -122,7 +122,7 @@ The basic structure has one appendix for each data chapter. So, for each chapter
 
 #### Optional sections
 
-According to UBC's G+PS instructions as of March of 2021, there are some global sections that are optional. The current structure has *all* of the sections. If you want to remove any global section you simply need to comment out the `\section` and `addcontentsline` sections (these give the title in the body and the table of content), and set the child `eval` option to *F*. I recommend you not to delete a section you don't want in case you change your mind latter and want to inldue it. Note that you do not need to worry about page numbering or table of contents! Below is an example of the `Dedication` section commented out. 
+According to UBC's G+PS instructions as of March of 2021, there are some global sections that are optional. The current structure has *all* of the sections. If you want to remove any global section you simply need to comment out the `\section` and `addcontentsline` sections (these give the title in the body and the table of content), and set the child `eval` option to *F*. I recommend you not to delete a section you don't want in case you change your mind latter and want to include it. Note that you do not need to worry about page numbering or table of contents! Below is an example of the `Dedication` section commented out. 
 
 ```
 <!-- Dedication -->
