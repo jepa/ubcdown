@@ -1,4 +1,4 @@
-# ubcdown <img src="inst/images/ubc_logo.png" align="right" />
+# ![ubcdown](/Images/ubc_logo.png)
 
 This repository provides a template for writing a PhD dissertation in R Markdown, and rendering those files into a PDF formatted according to [the requirements of the Faculty of Graduate and Postdoctoral Studies of the University of British Columbia](https://www.grad.ubc.ca/current-students/dissertation-thesis-preparation). It follows the 2021 requirements to convert R Markdown files into a PDF formatted ready for submission at UBC. This project has drawn directly on code and ideas from Dan Ovand's [gauchodown](https://github.com/DanOvando/gauchodown), with  the modifications needed to deal with UBC's G+PS requirements. However, unlike [gouchodown](https://github.com/DanOvando/gauchodown), this is not a package but a repository that you download and modify with your information. In addition, this repository was possible thanks to:
 
@@ -98,11 +98,8 @@ The basic structure has Four data chapters. If you have more than four data chap
 \renewcommand{\theequation}{5.\arabic{equation}}
 \setcounter{equation}{0}
 
+{r chapter_five, child = '~chapter_5_path/chapter_5_file.Rmd', eval = T}
 
-
-```
-
-```{r chapter_five, child = '~chapter_5_path/chapter_5_file.Rmd', eval = T}
 ```
 
 Adittionally, if you have less than four data chapters you can just comment out the last chapter and set the child option to `eval = F`. Alternativeley you can just errase the chapter info in the main script.
@@ -124,9 +121,9 @@ The basic structure has one appendix for each data chapter. So, for each chapter
 \setcounter{table}{0}
 \renewcommand{\theequation}{A5.\arabic{equation}}
 \setcounter{equation}{0}
-```
 
-```{r appendix_d, child = '~/path_to_appendix_5/appendix_5.Rmd', eval = T}
+{r appendix_d, child = '~/path_to_appendix_5/appendix_5.Rmd', eval = T}
+
 ```
 
 #### Optional sections
