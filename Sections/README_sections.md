@@ -51,7 +51,7 @@ If you do not have a glossary set the `glossary` chunk to `eval = F` in the `mai
 
 If you have a glossary, fill in the table. Note that the abbreviation and the definition need to be in the same level. For example, if the fifth line/item of the abbreviation list is *UBC*, then the fifth line/item of the definition must be *University of British Columbia*. At the end, the glossary will be printed in alphabetical order so, no need to worry about that!
 
-*Note*: I know there are "cleaner" ways to include a glossary in a document using LaTex. However, I was not able to make it work. If some one wants to tackle this, be my guest!
+*Note*: I know there are "cleaner" ways to include a glossary in a document using [LaTex](https://www.overleaf.com/learn/latex/Glossaries). However, I was not able to make it work. If some one wants to tackle this, be my guest!
 
 ## `06_Acknowledgements.Rmd`
 
