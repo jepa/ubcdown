@@ -35,6 +35,3 @@ Some things you can do that will increase the chance that your pull request is a
 * Write tests that pass `devtools::check()`.
 * Follow our [code style guide](http://adv-r.had.co.nz/Style.html).
 * Write a [good commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
-
-
-
