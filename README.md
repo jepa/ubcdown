@@ -1,11 +1,15 @@
 # ![ubcdown](./Images/ubc_logo.png)
 
-This repository provides a template for writing a PhD dissertation in R Markdown, and rendering those files into a PDF formatted according to [the requirements of the Faculty of Graduate and Postdoctoral Studies of the University of British Columbia](https://www.grad.ubc.ca/current-students/dissertation-thesis-preparation). Note that this is not an **official** template and thus, does not guarantee a successful submission. It follows the 2021 requirements to convert R Markdown files into a PDF formatted ready for submission at UBC. The faculty of G+PS has a relative felxible format so, as a reference, the current template will generate a PDF similar to [Palacios-Abrantes, 2021](https://open.library.ubc.ca/cIRcle/collections/ubctheses/24/items/1.0396646). This project has drawn directly on code and ideas from Dan Ovando's [gauchodown](https://github.com/DanOvando/gauchodown), with  the modifications needed to deal with UBC's G+PS requirements. However, unlike `gouchodown`, this is not a package but a repository that you download and modify with your information. In addition, this repository relay's heavily on [bookdown](https://github.com/rstudio/bookdown)
+This repository provides a template for writing a PhD dissertation in R Markdown, and rendering those files into a PDF formatted according to [the requirements of the Faculty of Graduate and Postdoctoral Studies of the University of British Columbia](https://www.grad.ubc.ca/current-students/dissertation-thesis-preparation). Note that this is not an **official** template and thus, does not guarantee a successful submission. It follows the 2021 requirements to convert R Markdown files into a PDF formatted ready for submission at UBC. The faculty of G+PS has a relative felxible format so, as a reference, the current template will generate a PDF similar to [Palacios-Abrantes, 2021](https://open.library.ubc.ca/cIRcle/collections/ubctheses/24/items/1.0396646) (You can also see the `dissertation_template.pdf` file). This project has drawn directly on code and ideas from Dan Ovando's [gauchodown](https://github.com/DanOvando/gauchodown), with the modifications needed to deal with UBC's G+PS requirements. However, unlike `gouchodown`, this is not a [bookdown](https://github.com/rstudio/bookdown)-like package but a simple repository that you download and modify with your information.
 
+Currently, the repository only renders a fully edited PDF as required by G+PS and I have no plans to expand this in the future. The word version is useful for revisions and keeping track changes, but it does not render a final formatted version.
 
-Currently, the repository only renders a fully edited PDF as required by G+PS and I have no plans to expand this in the future. The word version is useful for revisions and keeping track changes, but it does not render a final version.
+I provide very basic information on `bookdown` and `rmarkdown` here, if you are new to working with these packages, please read over the documentation available in [bookdown book](https://bookdown.org/yihui/bookdown/). Below I included some other tuttorials that I find usefull to working in `rmarkdown`:
 
-If you are new to working with `bookdown` and `rmarkdown`, please read over the documentation available in gauchodown PDF template (which you can create by following the simple instructions below) and the [bookdown book](https://bookdown.org/yihui/bookdown/).
+-  
+-
+-
+
 
 ## Using ubcdown to write your dissertation
 
@@ -18,7 +22,7 @@ From here on, the instructions below are the same regardless of the method you c
 
 ### Initial setup
 
-Using **ubcdown** has some prerequisites, such as Pandoc and LaTeX. To compile PDF documents using **R**, you need to have Pandoc, LaTeX and several related packages installed. If you have a recent version of [RStudio](http://www.rstudio.com/products/rstudio/download/), then you already have Pandoc and don't need to do anything more about that. Next is LaTeX. By far the easiest way to install LaTeX on any platform is with the [`tinytex`](https://yihui.name/tinytex/) package. Finally, there are some other packages that we will use in some sections of the thesis, these are [`knirt`](https://cran.r-project.org/web/packages/knitr/index.html) , [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) , [`dplyr`](https://dplyr.tidyverse.org/), [`tibble`](https://tibble.tidyverse.org/)
+Using **ubcdown** has some prerequisites, such as Pandoc and LaTeX. To compile PDF documents using **R**, you need to have Pandoc, LaTeX and several related packages installed. If you have a recent version of [RStudio](http://www.rstudio.com/products/rstudio/download/), then you already have Pandoc and don't need to do anything more about that. Next is LaTeX. By far the easiest way to install LaTeX on any platform is with the [`tinytex`](https://yihui.name/tinytex/) package. Finally, there are some other packages that we will use in some sections of the dissertation, these are [`knirt`](https://cran.r-project.org/web/packages/knitr/index.html) , [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) , [`dplyr`](https://dplyr.tidyverse.org/), [`tibble`](https://tibble.tidyverse.org/)
 
 ```
 install.packages(c('tinytex', 'rmarkdown', "knitr", "kableExtra"))
@@ -27,11 +31,11 @@ tinytex::install_tinytex()
 tinytex:::is_tinytex()
 ```
 
-### Starting to write your thesis
+### Starting to write your dissertation
 
 To use `gauchodown` from [RStudio](http://www.rstudio.com/products/rstudio/download/):
 
-1) Ensure that you have already installed LaTeX and the fonts described above, and are using the latest version of [RStudio](http://www.rstudio.com/products/rstudio/download/). You can use `gauchodown` without RStudio. For example, you can write the Rmd files in your favourite text editor (e.g. [Atom](https://atom.io/), [Notepad++](https://notepad-plus-plus.org/)). But RStudio is probably the easiest tool for writing both R code and text in your thesis. 
+1) Ensure that you have already installed LaTeX and the fonts described above, and are using the latest version of [RStudio](http://www.rstudio.com/products/rstudio/download/). You can use `gauchodown` without RStudio. For example, you can write the Rmd files in your favourite text editor (e.g. [Atom](https://atom.io/), [Notepad++](https://notepad-plus-plus.org/)). But RStudio is probably the easiest tool for writing both R code and text in your dissertation. 
 
 2) Install the `bookdown` package: 
 
@@ -39,7 +43,7 @@ To use `gauchodown` from [RStudio](http://www.rstudio.com/products/rstudio/downl
 install.packages("bookdown")
 ```
 
-### Your thesis structure
+### Your dissertation structure
 
 At this point you already `forked` this repository to your own github or download the zip file to your computer and got yourself a nice looking repo with a `main_script.Rmd` file. This is the main script of your dissertation (see below). In addition you will see the following structure (se below for detailed instructions of each section):
 
@@ -53,15 +57,15 @@ At this point you already `forked` this repository to your own github or downloa
 
 - Sections; Here you will find each of the [sections](https://www.grad.ubc.ca/current-students/dissertation-thesis-preparation/structure-theses-dissertations) of the dissertation according to UBC GP+s. Note that some of them (e.g., glossary) are optional. 
 
-- Data; This repository is intended to store any data needed for rendering the thesis. I strongly suggest you not to have any heavy data files in here. Github will allow you to have up to 2Mb with the [Git Large Files](https://git-lfs.github.com/) plug-in, but anything larger than that should be outside this project.
+- Data; This repository is intended to store any data needed for rendering the dissertation. I strongly suggest you not to have any heavy data files in here. Github will allow you to have up to 2Mb with the [Git Large Files](https://git-lfs.github.com/) plug-in, but anything larger than that should be outside this project.
 
-### Day-to-day writing of your thesis 
+### Day-to-day writing of your dissertation 
 
-You need to edit the individual chapter R Markdown files to write your thesis but you can write in the Rmd files without RStudio on our favourite text editor. However, I suggest you to come back to RStudio to create the PDF and work on the R code in the documents.
+You need to edit the individual chapter R Markdown files to write your dissertation but you can write in the Rmd files without RStudio on our favourite text editor. However, I suggest you to come back to RStudio to create the PDF and work on the R code in the documents.
 
-While writing, you should `git commit` your work frequently, after every major activity on your thesis. For example, every few paragraphs or section of text, and after major step of analysis development. You should `git push` at the end of each work session before you leave your computer or change task. For gentle novice-friendly guide to getting starting with using Git with R and RStudio, see <http://happygitwithr.com/>.
+While writing, you should `git commit` your work frequently, after every major activity on your dissertation. For example, every few paragraphs or section of text, and after major step of analysis development. You should `git push` at the end of each work session before you leave your computer or change task. For gentle novice-friendly guide to getting starting with using Git with R and RStudio, see <http://happygitwithr.com/>.
 
-The main script of your thesis is the `main_script.Rmd` file. This file calls all other sections and builds the final PDF. Note that there are some *few* parts of this script that need modification (e.g., Chapter titles). The "general" dissertation sections (e.g., abstract, acknowledgements, introduction), that is, those that are not data chapters, can be found in the `Sections` folder. Each Data chapter is called with the `knitr::knit_child` function (see below).
+The main script of your dissertation is the `main_script.Rmd` file. This file calls all other sections and builds the final PDF. Note that there are some *few* parts of this script that need modification (e.g., Chapter titles). The "general" dissertation sections (e.g., abstract, acknowledgements, introduction), that is, those that are not data chapters, can be found in the `Sections` folder. Each Data chapter is called with the `knitr::knit_child` function (see below).
 
 #### Keeping track of figures and tables
 
@@ -83,17 +87,17 @@ You can certainly use the same project to house all of the data and code for eac
 
 ## Rendering
 
-To render your thesis into a PDF, open `main_script.Rmd` in RStudio and then click the "knit" button. To change the output formats between PDF and Word, look at the `output:` field and comment-out the formats you don't want.
+To render your dissertation into a PDF, open `main_script.Rmd` in RStudio and then click the "knit" button. To change the output formats between PDF and Word, look at the `output:` field and comment-out the formats you don't want.
 
-The PDF file of your thesis will be deposited in the main directory.
+The PDF file of your dissertation will be deposited in the main directory.
 
 ## Components
 
-The following components are the ones you should edit to customize your thesis:
+The following components are the ones you should edit to customize your dissertation:
 
 ### `main_script.Rmd`
 
-This is the main configuration file for your thesis. It provides the main structure of your thesis and have *some* regions that require modifications. The main sections where you need to modify the file are identified with the label `<!-- Modify me! -->` right above the section. These include the Title of each data chapter and the title of each Appendix.
+This is the main configuration file for your dissertation. It provides the main structure of your dissertation and have *some* regions that require modifications. The main sections where you need to modify the file are identified with the label `<!-- Modify me! -->` right above the section. These include the Title of each data chapter and the title of each Appendix.
 
 #### Data Chapters
 The basic structure has Four data chapters. If you have more than four data chapters, you can copy and paste the format below after chapter four, (note that for each new chapter you need to change the Title, the figure, and the table numbers):
@@ -155,7 +159,7 @@ According to UBC's G+PS instructions as of March of 2021, there are some global 
 
 ### `00_Cover.Rmd`, `01_Committee_form.Rmd`, `02_Abstract.Rmd`, etc.
 
-These are the Rmd files for each *global* chapter in your dissertation. Write your thesis in these. If you're writing in RStudio, you may find the [wordcount addin](https://github.com/benmarwick/wordcountaddin) useful for getting word counts and readability statistics in R markdown documents.
+These are the Rmd files for each *global* chapter in your dissertation. Write your dissertation in these. If you're writing in RStudio, you may find the [wordcount addin](https://github.com/benmarwick/wordcountaddin) useful for getting word counts and readability statistics in R markdown documents.
 
 ## Related projects
 
