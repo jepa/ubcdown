@@ -15,8 +15,8 @@ header-includes:
    - \floatplacement{figure}{H} 
    - \usepackage{wrapfig}
    - \usepackage{pdfpages}
-bibliography: ../References/reference_list.bib
-csl: ../References/reference_format.csl
+# bibliography: ./References/reference_list.bib
+# csl: ./References/reference_format.csl
 ---
 
 
@@ -41,7 +41,7 @@ my_lib(
 
 <!-- Title page -->
 
-```{r Cover, child = '../Sections/00_Cover.Rmd', eval = T}
+```{r Cover, child = './Sections/00_Cover.Rmd', eval = T}
 ```
 
 <!-- Set numbers in non Arabic format. And starts in page II as required by G+PS.
@@ -51,7 +51,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 
 <!-- # Committee form -->
 
-```{r Committee_form, child = '../Sections/01_Committee_form.Rmd', eval = T}
+```{r Committee_form, child = '../Sections/01_Committee_form.Rmd', eval = F}
 ```
 
 \clearpage
@@ -67,7 +67,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \section*{Abstract}
 \addcontentsline{toc}{section}{Abstract} 
 
-```{r Abstract, child = '../Sections/02_Abstract.Rmd', eval = T}
+```{r Abstract, child = '../Sections/02_Abstract.Rmd', eval = F}
 ```
 
 \clearpage
@@ -77,7 +77,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \section*{Lay Summary}
 \addcontentsline{toc}{section}{Lay Summary}
 
-```{r Lay_abstract, child = '../Sections/03_Lay_abstract.Rmd', eval = T}
+```{r Lay_abstract, child = '../Sections/03_Lay_abstract.Rmd', eval = F}
 ```
 
 \clearpage
@@ -87,7 +87,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \section*{Preface}
 \addcontentsline{toc}{section}{Preface}
 
-```{r Preface, child = '../Sections/04_Preface.Rmd', eval = T}
+```{r Preface, child = '../Sections/04_Preface.Rmd', eval = F}
 ```
 
 \clearpage
@@ -117,7 +117,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \section*{Glossary}
 \addcontentsline{toc}{section}{Glossary}
 
-```{r Glossary, child = '../Sections/05_Glossary.Rmd', eval = T}
+```{r Glossary, child = '../Sections/05_Glossary.Rmd', eval = F}
 ```
 
 \clearpage
@@ -127,7 +127,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \section*{Acknowledgements}
 \addcontentsline{toc}{section}{Acknowledgements}
 
-```{r Acknowledgements, child = '../Sections/06_Acknowledgments.Rmd', eval = T}
+```{r Acknowledgements, child = '../Sections/06_Acknowledgments.Rmd', eval = F}
 ```
 
 \clearpage
@@ -136,7 +136,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \section*{Dedication}
 \addcontentsline{toc}{section}{Dedication}
 
-```{r dedication, child = '../Sections/07_Dedication.Rmd', eval = T}
+```{r dedication, child = '../Sections/07_Dedication.Rmd', eval = F}
 
 ```
 
@@ -158,7 +158,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \renewcommand{\theequation}{1.\arabic{equation}}
 \setcounter{equation}{0}
 
-```{r Intro, child = '../Sections/08_Introduction.Rmd', eval = T}
+```{r Intro, child = '../Sections/08_Introduction.Rmd', eval = F}
 ```
 
 \clearpage
@@ -176,7 +176,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \renewcommand{\theequation}{2.\arabic{equation}}
 \setcounter{equation}{0}
 
-```{r chapter_two, child = '~/GitHub/FishForVisa/Scripts/Manuscript_Draft.Rmd', eval = T}
+```{r chapter_two, child = '~/GitHub/FishForVisa/Scripts/Manuscript_Draft.Rmd', eval = F}
 ```
 
 \clearpage
@@ -192,7 +192,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \renewcommand{\theequation}{3.\arabic{equation}}
 \setcounter{equation}{0}
 
-```{r chapter_three, child = '~/GitHub/TransEmergence/Scripts/Manuscript.Rmd', eval = T}
+```{r chapter_three, child = '~/GitHub/TransEmergence/Scripts/Manuscript.Rmd', eval = F}
 ```
 
 \clearpage
@@ -208,7 +208,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \renewcommand{\theequation}{4.\arabic{equation}}
 \setcounter{equation}{0}
 
-```{r chapter_four, child = '~/GitHub/OC_Transboundary/Ecol/Manuscript_Draft.Rmd', eval = T}
+```{r chapter_four, child = '~/GitHub/OC_Transboundary/Ecol/Manuscript_Draft.Rmd', eval = F}
 ```
 
 \clearpage
@@ -217,7 +217,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 
 # Synthesis and Conclusion
 
-```{r Conclusion, child = '../Sections/09_Conclusion.Rmd', eval = T}
+```{r Conclusion, child = '../Sections/09_Conclusion.Rmd', eval = F}
 ```
 
 \clearpage
@@ -257,7 +257,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \setcounter{equation}{0}
 
 
-```{r appendix_a, child = '~/GitHub/FishForVisa/Scripts/supplements.Rmd', eval = T}
+```{r appendix_a, child = '~/GitHub/FishForVisa/Scripts/supplements.Rmd', eval = F}
 ```
 
 
@@ -275,7 +275,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \setcounter{equation}{0}
 
 
-```{r appendix_b, child = '~/GitHub/TransEmergence/Scripts/Supplements.Rmd', eval = T}
+```{r appendix_b, child = '~/GitHub/TransEmergence/Scripts/Supplements.Rmd', eval = F}
 ```
 
 <!-- ## Appendix C -->
@@ -293,7 +293,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \setcounter{equation}{0}
 
 
-```{r appendix_c, child = '~/GitHub/OC_Transboundary/Ecol/Supplements.Rmd', eval = T}
+```{r appendix_c, child = '~/GitHub/OC_Transboundary/Ecol/Supplements.Rmd', eval = F}
 ```
 
 

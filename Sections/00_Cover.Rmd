@@ -1,0 +1,73 @@
+---
+output:
+  bookdown::pdf_document2:
+    toc : false
+    keep_tex: no
+    number_sections: yes
+---
+
+\thispagestyle{empty}
+\begin{singlespace} 
+\begin{center}
+
+\Huge
+
+\textbf{HERE GOES YOUR TITLE}
+
+\Large
+
+\vspace{8mm}
+
+by
+
+\vspace{8mm}
+
+\huge
+
+Here Goes Your Name
+
+\Large
+
+\vspace{8mm}
+
+Undergraduate degree
+
+Master ddegree
+
+\vspace{10mm}
+
+A DISSERTATION SUBMITTED IN PARTIAL FULFILLMENT OF THE REQUIREMENTS FOR THE DEGREE OF
+
+\vspace{5mm}
+
+HERE GOES YOUR DEGREEE
+
+\vspace{5mm}
+in
+
+\vspace{5mm}
+
+THE FACULTY OF GRADUATE AND POSTDOCTORAL STUDIES
+
+\vspace{5mm}
+
+(Faculty)
+
+\vspace{5mm}
+
+THE UNIVERSITY OF BRITISH COLUMBIA
+
+\vspace{5mm}
+
+(Vancouver)
+
+\vspace{6mm}
+
+Month YYYY
+
+© Here Goes Your Name, YYYY
+
+\end{center}
+\end{singlespace}
+\normalsize
+\clearpage
