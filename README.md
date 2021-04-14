@@ -9,6 +9,11 @@ If you are new to working with `bookdown` and `rmarkdown`, please read over the 
 
 ## Using ubcdown to write your dissertation
 
+In order to use this repository as a template for your dissertation you have the following two options:
+
+- A) If you *have* a GitHub account; `fork`the repo to your own github and work from there
+- B) If you *do not have* a GitHub account; there is a green button in the upper right part of this page that says "Code". Click it and download the ZIP file. Once you un-zip it you should see a `UBCdown.Rproj`. Click on it and use it as a normal R project. To know more about R projects check the [R for data science](https://r4ds.had.co.nz/workflow-projects.html) chapter.
+
 ### Initial setup
 
 Using **ubcdown** has some prerequisites, such as Pandoc and LaTeX. To compile PDF documents using **R**, you need to have Pandoc, LaTeX and several related packages installed. If you have a recent version of [RStudio](http://www.rstudio.com/products/rstudio/download/), then you already have Pandoc and don't need to do anything more about that. Next is LaTeX. By far the easiest way to install LaTeX on any platform is with the [`tinytex`](https://yihui.name/tinytex/) package. Finally, there are some other packages that we will use in some sections of the thesis, these are [`knirt`](https://cran.r-project.org/web/packages/knitr/index.html) , [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) , [`dplyr`](https://dplyr.tidyverse.org/), [`tibble`](https://tibble.tidyverse.org/)
