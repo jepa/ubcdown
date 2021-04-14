@@ -137,7 +137,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \section*{Dedication}
 \addcontentsline{toc}{section}{Dedication}
 
-```{r Dedication, child = './Sections/07_Dedication.Rmd', eval = T}
+```{r Dedication, child = './Sections/07_Dedication.Rmd', eval = F}
 
 ```
 
@@ -159,7 +159,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \renewcommand{\theequation}{1.\arabic{equation}}
 \setcounter{equation}{0}
 
-```{r Intro, child = '../Sections/08_Introduction.Rmd', eval = F}
+```{r Introduction, child = './Sections/08_Introduction.Rmd', eval = T}
 ```
 
 \clearpage
