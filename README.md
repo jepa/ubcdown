@@ -9,10 +9,12 @@ If you are new to working with `bookdown` and `rmarkdown`, please read over the 
 
 ## Using ubcdown to write your dissertation
 
-In order to use this repository as a template for your dissertation you have the following two options:
+You have the following two options for using this repository as a template for your UBC dissertation;
 
 - A) If you *have* a GitHub account; `fork`the repo to your own github and work from there
 - B) If you *do not have* a GitHub account; there is a green button in the upper right part of this page that says "Code". Click it and download the ZIP file. Once you un-zip it you should see a `UBCdown.Rproj`. Click on it and use it as a normal R project. To know more about R projects check the [R for data science](https://r4ds.had.co.nz/workflow-projects.html) chapter.
+
+From here on, the instructions below are the same regardless of the method you chose. 
 
 ### Initial setup
 
