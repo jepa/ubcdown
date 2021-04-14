@@ -4,7 +4,7 @@ This repository provides a template for writing a PhD dissertation in R Markdown
 
 Currently, the repository only renders a fully edited PDF as required by G+PS and I have no plans to expand this in the future. The word version is useful for revisions and keeping track changes, but it does not render a final formatted version.
 
-I provide very basic information on `bookdown` and `rmarkdown` here, if you are new to working with these packages, please read over the documentation available in [bookdown book](https://bookdown.org/yihui/bookdown/). There are also numerous `rmarkdown` tuttorials online like those offered by the UBC IOF-based Mozilla study group [Deep Sea Data Squad](https://github.com/jepa/studyGroup/tree/gh-pages/lessons/R_Markdown) or the UCSB-based [eco-data-science](https://github.com/eco-data-science/eco-data-science.github.io). 
+I provide very basic information on `bookdown` and `rmarkdown` here, if you are new to working with these packages, please read over the documentation available in [bookdown book](https://bookdown.org/yihui/bookdown/). There are also numerous `rmarkdown` tuttorials online like those offered by the UBC IOF-based Mozilla study group [Deep Sea Data Squad](https://github.com/jepa/studyGroup/tree/gh-pages/lessons/R_Markdown) or the UCSB-based [eco-data-science](https://github.com/eco-data-science/eco-data-science.github.io). See also [Related projects](https://github.com/jepa/ubcdown/blob/main/README.md#related-projects) below.
 
 ## Using ubcdown to write your dissertation
 
