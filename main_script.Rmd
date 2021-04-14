@@ -128,7 +128,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \section*{Acknowledgements}
 \addcontentsline{toc}{section}{Acknowledgements}
 
-```{r Acknowledgements, child = './Sections/06_Acknowledgements.Rmd', eval = T}
+```{r Acknowledgements, child = './Sections/06_Acknowledgements.Rmd', eval = F}
 ```
 
 \clearpage
@@ -137,7 +137,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \section*{Dedication}
 \addcontentsline{toc}{section}{Dedication}
 
-```{r dedication, child = '../Sections/07_Dedication.Rmd', eval = F}
+```{r Dedication, child = './Sections/07_Dedication.Rmd', eval = T}
 
 ```
 

@@ -1,0 +1,17 @@
+---
+output:
+  bookdown::pdf_document2:
+    toc : false
+    keep_tex: no
+    number_sections: yes
+---
+
+
+\begin{center}
+    \vspace*{\fill}
+    Insert here your dedication
+    \vspace*{\fill}
+\end{center}
+
+
+
