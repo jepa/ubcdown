@@ -33,7 +33,8 @@ my_lib(
     "grid",
     # glossary
     "tidyverse",
-    "knitr"
+    "knitr",
+    "kableExtra"
   )
 )
 
@@ -87,7 +88,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \section*{Preface}
 \addcontentsline{toc}{section}{Preface}
 
-```{r Preface, child = './Sections/04_Preface.Rmd', eval = T}
+```{r Preface, child = './Sections/04_Preface.Rmd', eval = F}
 ```
 
 \clearpage
@@ -117,7 +118,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \section*{Glossary}
 \addcontentsline{toc}{section}{Glossary}
 
-```{r Glossary, child = '../Sections/05_Glossary.Rmd', eval = F}
+```{r Glossary, child = './Sections/05_Glossary.Rmd', eval = T}
 ```
 
 \clearpage

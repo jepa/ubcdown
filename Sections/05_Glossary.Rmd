@@ -1,0 +1,36 @@
+---
+output:
+  pdf_document:
+    toc : no
+    keep_tex: no
+    number_sections: yes
+---
+
+<!-- Note this section is Optional -->
+
+<!-- This is the actual Glossary table. Fill in the lines here  -->
+
+```{r glossary, eval = T, echo = F}
+
+tibble(
+   # Acronym list
+   Abr =  c("Acronym A",
+            "Acronym B",
+            "Acronym C"
+   ),
+   # Acronim definition
+   Meaning = c(
+      "Deffinition of A",
+      "Deffinition of B",
+      "Deffinition of C"
+   )
+) %>% 
+   dplyr::arrange(Abr) %>%
+   kable("latex",
+   booktabs = T,
+   col.names = NULL) %>%
+   kable_styling(full_width = T) %>%
+   column_spec(1, width = "2cm") %>%  # Size of first column
+   column_spec(1, bold = T) # Abbreviation bold
+
+```
