@@ -6,6 +6,8 @@ output:
     number_sections: yes
 ---
 
+<!-- This is mandatory! -->
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id nulla malesuada, auctor arcu at, tempor nibh. Etiam ultricies dictum nisi eu vulputate. Suspendisse tempor aliquam efficitur. Curabitur eget orci ac purus hendrerit laoreet. Proin porta arcu nisl, a fermentum tellus suscipit et. Nulla mattis orci ac tortor facilisis venenatis. Phasellus a velit tristique, tincidunt purus id, aliquet tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed et turpis sed odio faucibus aliquam nec eget est.
 
 Phasellus ligula lacus, euismod posuere pretium sit amet, ornare condimentum nisl. Integer eu aliquet lectus, sit amet sagittis turpis. Etiam tempus bibendum nibh, eu accumsan sapien. Suspendisse tincidunt sit amet nisi vel consectetur. Donec vitae odio elit. Quisque dignissim risus feugiat nunc tempor hendrerit. Fusce consequat lectus eget felis tempus, et lobortis ante ornare. Etiam euismod quam eu scelerisque mattis. Praesent nisi lectus, tincidunt nec sapien ac, fermentum pellentesque orci.
