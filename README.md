@@ -11,7 +11,7 @@ If you are new to working with `bookdown` and `rmarkdown`, please read over the 
 
 ### Initial setup
 
-Using **ubcdown** has some prerequisites, such as Pandoc and LaTeX. To compile PDF documents using **R**, you need to have Pandoc, LaTeX and several related packages installed. If you have a recent version of [RStudio](http://www.rstudio.com/products/rstudio/download/), then you already have Pandoc and don't need to do anything more about that. Next is LaTeX. By far the easiest way to install LaTeX on any platform is with the [`tinytex`](https://yihui.name/tinytex/) package. Finally, there are some other packages that we will use in some sections of the thesis, these are [`knirt`](), [`kableExtra](), [`dplyr`](), [`tibble`]()
+Using **ubcdown** has some prerequisites, such as Pandoc and LaTeX. To compile PDF documents using **R**, you need to have Pandoc, LaTeX and several related packages installed. If you have a recent version of [RStudio](http://www.rstudio.com/products/rstudio/download/), then you already have Pandoc and don't need to do anything more about that. Next is LaTeX. By far the easiest way to install LaTeX on any platform is with the [`tinytex`](https://yihui.name/tinytex/) package. Finally, there are some other packages that we will use in some sections of the thesis, these are [`knirt`](https://cran.r-project.org/web/packages/knitr/index.html) , [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) , [`dplyr`](https://dplyr.tidyverse.org/), [`tibble`](https://tibble.tidyverse.org/)
 
 ```
 install.packages(c('tinytex', 'rmarkdown', "knitr", "kableExtra"))
@@ -62,11 +62,11 @@ Figures and tables numbering and labelling can be a real pain at the end of the 
 
 ##### Numbering 
 
- For numbering figures and tables, we can use the following LaTex reference syntax for in-text figures `(Figure \@ref(fig:figureTitle)` and for in-text tables `(Table \@ref(table:tableTitle)`. You just need to call the figure in a chunk (see example below) or using [LaTex]().
+ For numbering figures and tables, we can use the following LaTex reference syntax for in-text figures `(Figure \@ref(fig:figureTitle)` and for in-text tables `(Table \@ref(table:tableTitle)`. You just need to call the figure in a chunk (see example below) or using [LaTex](https://www.overleaf.com/learn/latex/Lists_of_tables_and_figures).
 
 ##### Labelling 
 
-For labelling, if you are calling the Figure from a chunk you just need to include in the chunk options `fig.cap = "Your long figure caption"` for a long figure caption and `fig.scap = "For a short figure caption`. Note also you need to include `out.extra=''` for some reason (I don't really know why). Check [Ophra]() to do labelling in LaTex. See the `08_Introducction.Rmd`in the Sections folder for an example. 
+For labelling, if you are calling the Figure from a chunk you just need to include in the chunk options `fig.cap = "Your long figure caption"` for a long figure caption and `fig.scap = "For a short figure caption`. Note also you need to include `out.extra=''` for some reason (I don't really know why). Check [Overleaf Figures and Table](https://www.overleaf.com/learn/latex/Lists_of_tables_and_figures) to do labelling in LaTex. See the `08_Introducction.Rmd`in the Sections folder for an example. 
 
 #### Organizing with `knitr::knit_child`
 
