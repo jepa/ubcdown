@@ -87,7 +87,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \section*{Preface}
 \addcontentsline{toc}{section}{Preface}
 
-```{r Preface, child = '../Sections/04_Preface.Rmd', eval = F}
+```{r Preface, child = './Sections/04_Preface.Rmd', eval = T}
 ```
 
 \clearpage
