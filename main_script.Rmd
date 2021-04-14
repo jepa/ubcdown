@@ -118,7 +118,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \section*{Glossary}
 \addcontentsline{toc}{section}{Glossary}
 
-```{r Glossary, child = './Sections/05_Glossary.Rmd', eval = T}
+```{r Glossary, child = './Sections/05_Glossary.Rmd', eval = F}
 ```
 
 \clearpage
@@ -128,7 +128,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \section*{Acknowledgements}
 \addcontentsline{toc}{section}{Acknowledgements}
 
-```{r Acknowledgements, child = '../Sections/06_Acknowledgments.Rmd', eval = F}
+```{r Acknowledgements, child = './Sections/06_Acknowledgements.Rmd', eval = T}
 ```
 
 \clearpage
