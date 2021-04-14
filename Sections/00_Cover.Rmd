@@ -6,6 +6,8 @@ output:
     number_sections: yes
 ---
 
+<!-- Note this section is Required -->
+
 \thispagestyle{empty}
 \begin{singlespace} 
 \begin{center}

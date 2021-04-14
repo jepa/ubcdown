@@ -6,6 +6,8 @@ output:
     number_sections: yes
 ---
 
+<!-- Note this section is Required -->
+
 \doublespacing
 
 The following individuals certify that they have read, and recommend to the Faculty of Graduate
