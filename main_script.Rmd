@@ -159,7 +159,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \renewcommand{\theequation}{1.\arabic{equation}}
 \setcounter{equation}{0}
 
-```{r Introduction, child = './Sections/08_Introduction.Rmd', eval = T}
+```{r Introduction, child = './Sections/08_Introduction.Rmd', eval = F}
 ```
 
 \clearpage
@@ -167,7 +167,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 <!-- From here on, include your different data chapters using normal Rmarkdown titles -->
 
 <!-- Modify me! -->
-# Chapter Two: Incert Title Chapter Here 
+# Chapter Two: Insert Title Chapter Here 
 
 <!-- Set figure and table numbering according to the chapter -->
 \renewcommand{\thefigure}{2.\arabic{figure}}
@@ -177,13 +177,13 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \renewcommand{\theequation}{2.\arabic{equation}}
 \setcounter{equation}{0}
 
-```{r chapter_two, child = '~/GitHub/FishForVisa/Scripts/Manuscript_Draft.Rmd', eval = F}
+```{r chapter_two, child = 'insert_project_path_here/chapter_manuscript.Rmd', eval = F}
 ```
 
 \clearpage
 
 <!-- Modify me! -->
-# Chapter Three: Incert Title Chapter Here
+# Chapter Three: Insert Title Chapter Here
 
 <!-- Set figure and table numbering according to the chapter -->
 \renewcommand{\thefigure}{3.\arabic{figure}}
@@ -193,13 +193,13 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \renewcommand{\theequation}{3.\arabic{equation}}
 \setcounter{equation}{0}
 
-```{r chapter_three, child = '~/GitHub/TransEmergence/Scripts/Manuscript.Rmd', eval = F}
+```{r chapter_three, child = 'insert_project_path_here/chapter_manuscript.Rmd', eval = F}
 ```
 
 \clearpage
 
 <!-- Modify me! -->
-# Chapter Four: Incert Title Chapter Here
+# Chapter Four: Insert Title Chapter Here
 
 <!-- Set figure and table numbering according to the chapter -->
 \renewcommand{\thefigure}{4.\arabic{figure}}
@@ -209,7 +209,23 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \renewcommand{\theequation}{4.\arabic{equation}}
 \setcounter{equation}{0}
 
-```{r chapter_four, child = '~/GitHub/OC_Transboundary/Ecol/Manuscript_Draft.Rmd', eval = F}
+```{r chapter_four, child = 'insert_project_path_here/chapter_manuscript.Rmd', eval = F}
+```
+
+\clearpage
+
+<!-- Modify me! -->
+# Chapter Five: Insert Title Chapter Here
+
+<!-- Set figure and table numbering according to the chapter -->
+\renewcommand{\thefigure}{5.\arabic{figure}}
+\setcounter{figure}{0}
+\renewcommand{\thetable}{5.\arabic{table}}
+\setcounter{table}{0}
+\renewcommand{\theequation}{5.\arabic{equation}}
+\setcounter{equation}{0}
+
+```{r chapter_five, child = 'insert_project_path_here/chapter_manuscript.Rmd', eval = F}
 ```
 
 \clearpage
@@ -218,7 +234,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 
 # Synthesis and Conclusion
 
-```{r Conclusion, child = '../Sections/09_Conclusion.Rmd', eval = F}
+```{r Conclusion, child = './Sections/09_Conclusion.Rmd', eval = T}
 ```
 
 \clearpage
