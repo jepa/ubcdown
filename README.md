@@ -1,4 +1,4 @@
-# ![ubcdown](/Images/ubc_logo.png)
+# ![ubcdown](./Images/ubc_logo.png)
 
 This repository provides a template for writing a PhD dissertation in R Markdown, and rendering those files into a PDF formatted according to [the requirements of the Faculty of Graduate and Postdoctoral Studies of the University of British Columbia](https://www.grad.ubc.ca/current-students/dissertation-thesis-preparation). Note that this is not an **official** template and thus, does not guarantee a successful submission. It follows the 2021 requirements to convert R Markdown files into a PDF formatted ready for submission at UBC. The faculty of G+PS has a relative felxible format so, as a reference, the current template will generate a PDF similar to [Palacios-Abrantes, 2021](https://open.library.ubc.ca/cIRcle/collections/ubctheses/24/items/1.0396646). This project has drawn directly on code and ideas from Dan Ovando's [gauchodown](https://github.com/DanOvando/gauchodown), with  the modifications needed to deal with UBC's G+PS requirements. However, unlike `gouchodown`, this is not a package but a repository that you download and modify with your information. In addition, this repository relay's heavily on [bookdown](https://github.com/rstudio/bookdown)
 
@@ -11,12 +11,10 @@ If you are new to working with `bookdown` and `rmarkdown`, please read over the 
 
 ### Initial setup
 
-Using **ubcdown** has some prerequisites, such as Pandoc and LaTeX. To compile PDF documents using **R**, you need to have Pandoc, LaTeX and several related packages installed. If you have a recent version of [RStudio](http://www.rstudio.com/products/rstudio/download/), then you already have Pandoc and don't need to do anything more about that. 
-
-Next is LaTeX. By far the easiest way to install LaTeX on any platform is with the [`tinytex`](https://yihui.name/tinytex/) package:
+Using **ubcdown** has some prerequisites, such as Pandoc and LaTeX. To compile PDF documents using **R**, you need to have Pandoc, LaTeX and several related packages installed. If you have a recent version of [RStudio](http://www.rstudio.com/products/rstudio/download/), then you already have Pandoc and don't need to do anything more about that. Next is LaTeX. By far the easiest way to install LaTeX on any platform is with the [`tinytex`](https://yihui.name/tinytex/) package. Finally, there are some other packages that we will use in some sections of the thesis, these are [`knirt`](), [`kableExtra](), [`dplyr`](), [`tibble`]()
 
 ```
-install.packages(c('tinytex', 'rmarkdown'))
+install.packages(c('tinytex', 'rmarkdown', "knitr", "kableExtra"))
 tinytex::install_tinytex()
 # after restarting RStudio, confirm that you have LaTeX with 
 tinytex:::is_tinytex()
@@ -58,6 +56,18 @@ While writing, you should `git commit` your work frequently, after every major a
 
 The main script of your thesis is the `main_script.Rmd` file. This file calls all other sections and builds the final PDF. Note that there are some *few* parts of this script that need modification (e.g., Chapter titles). The "general" dissertation sections (e.g., abstract, acknowledgements, introduction), that is, those that are not data chapters, can be found in the `Sections` folder. Each Data chapter is called with the `knitr::knit_child` function (see below).
 
+#### Keeping track of figures and tables
+
+Figures and tables numbering and labelling can be a real pain at the end of the dissertation, specially if you remove/add one last figure/table and need to re-number all. Also, figure labels can easily become so huge they occupy a whole page so we can include a long label for the text and a short one for the table of contents.  
+
+##### Numbering 
+
+ For numbering figures and tables, we can use the following LaTex reference syntax for in-text figures `(Figure \@ref(fig:figureTitle)` and for in-text tables `(Table \@ref(table:tableTitle)`. You just need to call the figure in a chunk (see example below) or using [LaTex]().
+
+##### Labelling 
+
+For labelling, if you are calling the Figure from a chunk you just need to include in the chunk options `fig.cap = "Your long figure caption"` for a long figure caption and `fig.scap = "For a short figure caption`. Note also you need to include `out.extra=''` for some reason (I don't really know why). Check [Ophra]() to do labelling in LaTex. See the `08_Introducction.Rmd`in the Sections folder for an example. 
+
 #### Organizing with `knitr::knit_child`
 
 You can certainly use the same project to house all of the data and code for each of your chapters (and if your analysis runs fast enough you could of course simply do all of your analysis and writing for a chapter in the .Rmd for that chapter). In my experience, I had one R-project *per* chapter which I then knitted together for the final dissertation. Here is an explanation, copied directly from Dan Ovando of `gauchodown`, as I couldn't to better:
@@ -81,8 +91,10 @@ This is the main configuration file for your thesis. It provides the main struct
 #### Data Chapters
 The basic structure has Four data chapters. If you have more than four data chapters, you can copy and paste the format below after chapter four, (note that for each new chapter you need to change the Title, the figure, and the table numbers):
 
+
 ```
-# Chapter Five: Incert Title Chapter Here
+
+# Chapter Five: Insert Title Chapter Here
 
 <!-- Set figure and table numbering according to the chapter -->
 \renewcommand{\thefigure}{5.\arabic{figure}}
