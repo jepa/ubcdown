@@ -20,7 +20,7 @@ From here on, the instructions below are the same regardless of the method you c
 Using **ubcdown** has some prerequisites, such as Pandoc and LaTeX. To compile PDF documents using **R**, you need to have Pandoc, LaTeX and several related packages installed. If you have a recent version of [RStudio](http://www.rstudio.com/products/rstudio/download/), then you already have Pandoc and don't need to do anything more about that. Next is LaTeX. By far the easiest way to install LaTeX on any platform is with the [`tinytex`](https://yihui.name/tinytex/) package. Finally, there are some other packages that we will use in some sections of the dissertation, these are [`knirt`](https://cran.r-project.org/web/packages/knitr/index.html) , [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) , [`dplyr`](https://dplyr.tidyverse.org/), [`tibble`](https://tibble.tidyverse.org/)
 
 ```
-install.packages(c('tinytex', 'rmarkdown', "knitr", "kableExtra"))
+install.packages(c('tinytex', 'rmarkdown', "knitr", "kableExtra","png","grid","dplyr","tibble"))
 tinytex::install_tinytex()
 # after restarting RStudio, confirm that you have LaTeX with 
 tinytex:::is_tinytex()
