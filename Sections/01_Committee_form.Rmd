@@ -1,0 +1,43 @@
+---
+output:
+  bookdown::pdf_document2:
+    toc : no
+    keep_tex: no
+    number_sections: yes
+---
+
+\doublespacing
+
+The following individuals certify that they have read, and recommend to the Faculty of Graduate
+and Postdoctoral Studies for acceptance, the dissertation entitled:
+
+\vspace{5mm}
+
+
+\noindent\underline{\makebox[6in][l]{Insert your dissertation title here}}  
+\vspace{2mm}
+
+submitted by \underline{Insert Your Name Here} in partial fulfillment of the requirements for
+
+the degree of \noindent\underline{\makebox[5in][l]{Name of your Degree}}  
+
+in \noindent\underline{\makebox[5.8in][l]{Insert Faculty}}
+
+\vspace{5mm}
+
+**Examining Committee:**
+
+\noindent\underline{\makebox[6in][l]{Name of your Supervisor}}  
+Research Supervisor
+
+\noindent\underline{\makebox[6in][l]{Name of your Committee Member}}  
+Supervisory Committee Member 
+
+\noindent\underline{\makebox[6in][l]{Name of University Examiner}}  
+University Examiner
+
+\noindent\underline{\makebox[6in][l]{Name of University Examiner}}  
+University Examiner
+
+\noindent\underline{\makebox[6in][l]{Name of External Examiner}}  
+External Examiner

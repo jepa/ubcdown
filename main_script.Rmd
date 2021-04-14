@@ -41,7 +41,7 @@ my_lib(
 
 <!-- Title page -->
 
-```{r Cover, child = './Sections/00_Cover.Rmd', eval = T}
+```{r Cover, child = './Sections/00_Cover.Rmd', eval = F}
 ```
 
 <!-- Set numbers in non Arabic format. And starts in page II as required by G+PS.
@@ -51,7 +51,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 
 <!-- # Committee form -->
 
-```{r Committee_form, child = '../Sections/01_Committee_form.Rmd', eval = F}
+```{r Committee_form, child = './Sections/01_Committee_form.Rmd', eval = F}
 ```
 
 \clearpage
@@ -67,7 +67,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \section*{Abstract}
 \addcontentsline{toc}{section}{Abstract} 
 
-```{r Abstract, child = '../Sections/02_Abstract.Rmd', eval = F}
+```{r Abstract, child = './Sections/02_Abstract.Rmd', eval = F}
 ```
 
 \clearpage
@@ -77,7 +77,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \section*{Lay Summary}
 \addcontentsline{toc}{section}{Lay Summary}
 
-```{r Lay_abstract, child = '../Sections/03_Lay_abstract.Rmd', eval = F}
+```{r Lay_abstract, child = './Sections/03_Lay_abstract.Rmd', eval = F}
 ```
 
 \clearpage
