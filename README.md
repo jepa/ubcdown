@@ -4,12 +4,7 @@ This repository provides a template for writing a PhD dissertation in R Markdown
 
 Currently, the repository only renders a fully edited PDF as required by G+PS and I have no plans to expand this in the future. The word version is useful for revisions and keeping track changes, but it does not render a final formatted version.
 
-I provide very basic information on `bookdown` and `rmarkdown` here, if you are new to working with these packages, please read over the documentation available in [bookdown book](https://bookdown.org/yihui/bookdown/). Below I included some other tuttorials that I find usefull to working in `rmarkdown`:
-
--  
--
--
-
+I provide very basic information on `bookdown` and `rmarkdown` here, if you are new to working with these packages, please read over the documentation available in [bookdown book](https://bookdown.org/yihui/bookdown/). There are also numerous `rmarkdown` tuttorials online like those offered by the UBC IOF-based Mozilla study group [Deep Sea Data Squad](https://github.com/jepa/studyGroup/tree/gh-pages/lessons/R_Markdown) or the UCSB-based [eco-data-science](https://github.com/eco-data-science/eco-data-science.github.io). 
 
 ## Using ubcdown to write your dissertation
 
@@ -85,7 +80,7 @@ You can certainly use the same project to house all of the data and code for eac
 
 *My dissertation had three chapters. For each chapter, I created a separate RStudio project and folder on my computer, call it "~/PhD/zissou" (I nickname all my projects). Inside that folder I stored the data, code, and paper .Rmd for the `zissou` chapter. When I wanted to actually knit the dissertation, rather than copy-and-pasting all the required results or data from `zissou` over to my `dissertation` folder, I simply used `knit_child` (and some voodoo in the chunk options).*
 
-## Rendering
+## Rendering (a.k.a. creating the PDF!)
 
 To render your dissertation into a PDF, open `main_script.Rmd` in RStudio and then click the "knit" button. To change the output formats between PDF and Word, look at the `output:` field and comment-out the formats you don't want.
 
