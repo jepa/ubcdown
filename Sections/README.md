@@ -46,7 +46,7 @@ Use this document to write your preface
 
 ## `05_Glossary.Rmd`
 
-- *Optional*
+- *Optional*  
 If you do not have a glossary set the `glossary` chunk to `eval = F` in the `main_script.Rmd`
 
 If you have a glossary, fill in the table. Note that the abbreviation and the definition need to be in the same level. For example, if the fifth line/item of the abbreviation list is *UBC*, then the fifth line/item of the definition must be *University of British Columbia*. At the end, the glossary will be printed in alphabetical order so, no need to worry about that!
@@ -55,13 +55,15 @@ If you have a glossary, fill in the table. Note that the abbreviation and the de
 
 ## `06_Acknowledgements.Rmd`
 
-- *Optional*
+- *Optional*  
+If you do not have a glossary set the `Acknowledgements` chunk to `eval = F` in the `main_script.Rmd`
 
 Use this document to write your Acknowledgements section
 
 ## `07_Dedication.Rmd`
 
-- *Optional*
+- *Optional*  
+If you do not have a glossary set the `Dedication` chunk to `eval = F` in the `main_script.Rmd`
 
 Use this document to write your Dedication. It will print the dedication centred to the middle of the page.
 
