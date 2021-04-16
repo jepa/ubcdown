@@ -24,19 +24,13 @@ csl: ./References/reference_format.csl
 knitr::opts_chunk$set(echo = TRUE)
 options(knitr.duplicate.label = 'allow')
 
-library(MyFunctions)
-
-my_lib(
-  c(
-    # Introduction
-    "png",
-    "grid",
-    # glossary
-    "tidyverse",
-    "knitr",
-    "kableExtra"
-  )
-)
+library("png")
+library("grid")
+library("tidyverse")
+library("knitr")
+library("kableExtra")
+library("dplyr")
+library("tibble")
 
 ```
 
