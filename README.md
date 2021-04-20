@@ -84,9 +84,17 @@ You can certainly use the same project to house all of the data and code for eac
 
 ## Rendering (a.k.a. creating the PDF!)
 
-To render your dissertation into a PDF, open `main_script.Rmd` in RStudio and then click the "knit" button. To change the output formats between PDF and Word, look at the `output:` field and comment-out the formats you don't want.
+## Rendering to PDF (Formatted)
 
-The PDF file of your dissertation will be deposited in the main directory.
+To render your dissertation into a PDF, open `main_script.Rmd` in RStudio and then click the "knit" button. To change the output formats between PDF and Word, look at the `output:` field and comment-out the formats you don't want. The PDF file of your dissertation will be deposited in the main directory.
+
+## Rendering to Word document (not formatted)
+
+**Note:**, *the final product will not be formatted, the cover will not show up, neither any LaTex command (e.g., tables with the `kable` package or the section titles up to the Introduction). The good news is that things like figures numbering and references will work. I suggest you only use the Word version for getting revisions from your committee.*
+
+If you feel like it, check out [this issue](https://github.com/jepa/ubcdown/issues/3) and help rendering to a formatted Word!
+
+To render your dissertation to Word, go to the top of the `main_script.Rmd`, comment line 3 `bookdown::pdf_book:` and comment out line 4 `bookdown::word_document2:` (or just change `pdf_book` to `word_document2`). Additionally, you will need to set `toc: yes` on line 5 and change the sections titles up to the Introduction by commenting the `\section*{Title}` and commenting out the `# Tilte`. This will render the classic `rmarkdown` table of contents and titles.
 
 ## Components
 
