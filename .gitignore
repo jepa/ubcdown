@@ -34,7 +34,11 @@ vignettes/*.pdf
 # Temporary files created by R markdown
 *.utf8.md
 *.knit.md
+
+# Products of the rendering that will not be uploaded
 main_script.log
+main_script.docx
+main_script.pdf
 
 # R Environment Variables
 .Renviron
