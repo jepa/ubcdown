@@ -26,6 +26,8 @@ tinytex::install_tinytex()
 tinytex:::is_tinytex()
 ```
 
+Note that this template was created using `R version 3.5.2 (2018-12-20) -- "Eggshell Igloo"`  and tested in `R version 4.0.4 (2021-02-15) -- "Lost Library Book"` 
+
 ### Starting to write your dissertation
 
 To use `gauchodown` from [RStudio](http://www.rstudio.com/products/rstudio/download/):
