@@ -26,6 +26,9 @@ tinytex::install_tinytex()
 tinytex:::is_tinytex()
 ```
 
+If you are getting an error message “destination /usr/local/bin not writable” you can see the following [`tidytex`](https://github.com/yihui/tinytex/issues/24) issue.
+
+
 Note that this template was created using `R version 3.5.2 (2018-12-20) -- "Eggshell Igloo"`  and tested in `R version 4.0.4 (2021-02-15) -- "Lost Library Book"` 
 
 ### Starting to write your dissertation
@@ -83,6 +86,15 @@ You can certainly use the same project to house all of the data and code for eac
 *My dissertation had three chapters. For each chapter, I created a separate RStudio project and folder on my computer, call it "~/PhD/zissou" (I nickname all my projects). Inside that folder I stored the data, code, and paper .Rmd for the `zissou` chapter. When I wanted to actually knit the dissertation, rather than copy-and-pasting all the required results or data from `zissou` over to my `dissertation` folder, I simply used `knit_child` (and some voodoo in the chunk options).*
 
 ## Rendering (a.k.a. creating the PDF!)
+
+Note that the first time you render to PDF, *R* will install all of the LaTex dependencies and, thus, might take a while. Don't worry, this will only be the first time! Looks something like this:
+
+```
+tlmgr.pl: package repository https://ctan.math.illinois.edu/systems/texlive/tlnet (not verified: gpg unavailable)
+[1/1, ??:??/??:??] install: ragged2e [3k]
+running mktexlsr ...
+done running mktexlsr.
+```
 
 ## Rendering to PDF (Formatted)
 
