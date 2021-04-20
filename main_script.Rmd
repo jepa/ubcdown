@@ -1,7 +1,8 @@
 ---
 output:
-  bookdown::pdf_book:
-    toc: no
+  bookdown::pdf_book: # comment when rendering to word document
+  # bookdown::word_document2: # uncomment if rendering to word document
+    toc: no # change me to yes if rendering to Word
     keep_tex: no
     number_sections: yes
     fig_width: 6
@@ -20,13 +21,16 @@ csl: ./References/reference_format.csl
 ---
 
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, eval = T}
+
 knitr::opts_chunk$set(echo = TRUE)
 options(knitr.duplicate.label = 'allow')
 
+
+# These libraries are only needed for examples in the introduction 
 library("png")
 library("grid")
-library("tidyverse")
+# These are needed in case you are having a glossary
 library("knitr")
 library("kableExtra")
 library("dplyr")
