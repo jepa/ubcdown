@@ -4,7 +4,7 @@ This file contains the instructions to fill in each of the dissertation sections
 
 Their are named in order of appearance in the dissertation [following UBC G+PS](https://www.grad.ubc.ca/current-students/dissertation-thesis-preparation/structure-theses-dissertations). Note that there are missing sections within these (e.g., table of contents goes between Preface and Acknowledgements). These are embedded in the `main_thesis.Rmd` file and need no modification.
 
-*Note:* Non of this individual sections are intended to *knit* independently. For that to happen, you will need to include the *LaTex* packages. For testing, I recommend you go to the `main_script.RMD` and set all chunks but the one you are testing to `eval = F`
+*Note:* None of this individual sections are intended to *knit* independently. For that to happen, you will need to include the *LaTex* packages. For testing, I recommend you go to the `main_script.RMD` and set all chunks but the one you are testing to `eval = F`
 
 # Sections
 
