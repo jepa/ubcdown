@@ -176,7 +176,7 @@ According to UBC's G+PS instructions as of March of 2021, there are some global 
 
 ### `00_Cover.Rmd`, `01_Committee_form.Rmd`, `02_Abstract.Rmd`, etc.
 
-These are the Rmd files for each *global* chapter in your dissertation. Write your dissertation in these. If you're writing in RStudio, you may find the [wordcount addin](https://github.com/benmarwick/wordcountaddin) useful for getting word counts and readability statistics in R markdown documents.
+These are the Rmd files for each *global* chapter in your dissertation. Write your dissertation in these. If you're writing in RStudio, you may find the [wordcount addin](https://github.com/benmarwick/wordcountaddin) useful for getting word counts and readability statistics in R markdown documents. Check out the [Section's ReadMe](https://github.com/jepa/ubcdown/tree/main/Sections#dissertation-sections) for specifics of each section.
 
 ## Related projects
 
