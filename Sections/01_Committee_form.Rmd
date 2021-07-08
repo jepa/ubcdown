@@ -23,7 +23,7 @@ submitted by \underline{Insert Your Name Here} in partial fulfillment of the req
 
 the degree of \noindent\underline{\makebox[5in][l]{Name of your Degree}}  
 
-in \noindent\underline{\makebox[5.8in][l]{Insert Faculty}}
+in \noindent\underline{\makebox[5.8in][l]{Insert Program}}
 
 \vspace{5mm}
 
