@@ -18,10 +18,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend odio odi
 
 This text will render with a figure referenced (Figure \@ref(fig:figureTitle)).
 
-```{r figureTitle, eval = T, echo = T, fig.width = 5, fig.height = 4, echo=FALSE, fig.cap="This is the long caption of my fifure that will apear in the main text.", fig.scap = "This is the short title for the figure list", out.extra=''}
+```{r figureTitle, eval = T, echo = T, fig.width = 3, fig.height = 2, echo=FALSE, fig.cap="This is the long caption of the figure that will apear in the main text.", fig.scap = "This is the short title for the figure list", out.extra=''}
 
 # Call the image
-img <- readPNG("../Images/ubc_logo.png")
+img <- readPNG("../Images/Professortocat.png")
 
 # Print the image
 grid.raster(img)
