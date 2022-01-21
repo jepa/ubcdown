@@ -96,7 +96,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 
 <!-- Include a table of contents (including list of figures and tables) without numbering and with dots -->
 
-
+\phantomsection <!-- This will correct the bookmarks paging (See issue #4)  -->
 \addcontentsline{toc}{section}{Table of Contents}
 
 \thispagestyle{empty}
@@ -105,9 +105,11 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \setcounter{tocdepth}{3}
 \tableofcontents
 \clearpage
+\phantomsection
 \addcontentsline{toc}{section}{List of Tables}
 \listoftables
 \clearpage
+\phantomsection
 \addcontentsline{toc}{section}{List of Figures}
 \listoffigures
 \clearpage
