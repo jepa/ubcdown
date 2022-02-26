@@ -17,7 +17,7 @@ From here on, the instructions below are the same regardless of the method you c
 
 ### Initial setup
 
-Using **ubcdown** has some prerequisites, such as Pandoc and LaTeX. To compile PDF documents using **R**, you need to have Pandoc, LaTeX and several related packages installed. If you have a recent version of [RStudio](http://www.rstudio.com/products/rstudio/download/), then you already have Pandoc and don't need to do anything more about that. Next is LaTeX. By far the easiest way to install LaTeX on any platform is with the [`tinytex`](https://yihui.name/tinytex/) package. Finally, there are some other packages that we will use in some sections of the dissertation, these are [`knirt`](https://cran.r-project.org/web/packages/knitr/index.html) , [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) , [`dplyr`](https://dplyr.tidyverse.org/), [`tibble`](https://tibble.tidyverse.org/)
+Using **ubcdown** has some prerequisites, such as Pandoc and LaTeX. To compile PDF documents using **R**, you need to have Pandoc, LaTeX and several related packages installed. If you have a recent version of [RStudio](http://www.rstudio.com/products/rstudio/download/), then you already have Pandoc and don't need to do anything more about that. Next is LaTeX. By far the easiest way to install LaTeX on any platform is with the [`tinytex`](https://yihui.name/tinytex/) package. Finally, there are some other packages that we will use in some sections of the dissertation, these are [`knitr`](https://cran.r-project.org/web/packages/knitr/index.html) , [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) , [`dplyr`](https://dplyr.tidyverse.org/), [`tibble`](https://tibble.tidyverse.org/)
 
 ```
 install.packages(c('tinytex', 'rmarkdown', "knitr", "kableExtra","png","grid","dplyr","tibble"))
@@ -26,16 +26,16 @@ tinytex::install_tinytex()
 tinytex:::is_tinytex()
 ```
 
-If you are getting an error message “destination /usr/local/bin not writable” you can see the following [`tidytex`](https://github.com/yihui/tinytex/issues/24) issue.
+If you are getting an error message “destination /usr/local/bin not writable” you can see the following [`tinytex`](https://github.com/yihui/tinytex/issues/24) issue.
 
 
 Note that this template was created using `R version 3.5.2 (2018-12-20) -- "Eggshell Igloo"`  and tested in `R version 4.0.4 (2021-02-15) -- "Lost Library Book"` 
 
 ### Starting to write your dissertation
 
-To use `gauchodown` from [RStudio](http://www.rstudio.com/products/rstudio/download/):
+To use `ubcdown` from [RStudio](http://www.rstudio.com/products/rstudio/download/):
 
-1) Ensure that you have already installed LaTeX and the fonts described above, and are using the latest version of [RStudio](http://www.rstudio.com/products/rstudio/download/). You can use `gauchodown` without RStudio. For example, you can write the Rmd files in your favourite text editor (e.g. [Atom](https://atom.io/), [Notepad++](https://notepad-plus-plus.org/)). But RStudio is probably the easiest tool for writing both R code and text in your dissertation. 
+1) Ensure that you have already installed LaTeX and the fonts described above, and are using the latest version of [RStudio](http://www.rstudio.com/products/rstudio/download/). You can use `ubcdown` without RStudio. For example, you can write the Rmd files in your favourite text editor (e.g. [Atom](https://atom.io/), [Notepad++](https://notepad-plus-plus.org/)). But RStudio is probably the easiest tool for writing both R code and text in your dissertation. 
 
 2) Install the `bookdown` package: 
 
