@@ -42,7 +42,7 @@ Note: "TEXT-REFERENCE" can be replace with whatever, I suggest something descrip
 
 Example:
 
-(ref:introfig1-cap) This caption was written with an in-text reference. See how I can use citations like this and **special** *characters* _!?@#, which normally would not be possible.
+(ref:introfig1-cap) This caption was written with an in-text reference. See how I can use citations like this [@degoede2017] and **special** *characters* _!?@#, which normally would not be possible.
 
 ```{r figureTitle, eval = T, echo = T, fig.width = 3, fig.height = 2, echo=FALSE, fig.cap="(ref:introfig1-cap)", fig.scap = "This is the short title for the figure list", out.extra=''}
 
