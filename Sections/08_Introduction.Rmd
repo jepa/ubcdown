@@ -14,6 +14,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend odio odi
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend odio odio, et consectetur nunc commodo vitae. Donec eu finibus lacus. Integer at porta nulla. Fusce dignissim gravida lacinia. Nulla ut odio in ante imperdiet placerat. Maecenas vel imperdiet lorem. Proin ultricies, ex at bibendum fringilla, neque libero malesuada sem, in tincidunt leo mi vel mi. Phasellus scelerisque sagittis urna sed sodales. Curabitur iaculis justo velit, ultricies euismod justo convallis non. Nunc id purus et ante iaculis dignissim vel non erat. Donec dignissim urna ut lobortis congue. Nulla tempus ut ipsum non ornare. Donec ac purus nec sem cursus eleifend. Suspendisse potenti. Vestibulum ac vehicula ante.
 
+## In-text citations
+
+Read section [2.8](https://bookdown.org/yihui/bookdown/citations.html) of the bookdown guide for more details.
+
+To use in-text citations like this [@degoede2017], add bibliographic entries to the *References/reference_list.bib* file, then you can reference the entries using the *citation key*: `[@key]` e.g. `[@degoede2017]`.
+
+UBCdown comes with two reference styles: Harvard, and Vancouver. To change styles, just edit the YAML section of `main_script.Rmd` to reference the appropriate `.csl` file. If desired, you can also add/replace with your own citation style file `.csl`.
+
 ## Referencing figures
 
 ### Basics
