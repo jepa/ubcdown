@@ -8,23 +8,10 @@ output:
 
 <!-- Note this section is Optional -->
 
-<!-- This is the actual Glossary table. Fill in the lines here  -->
+<!-- Edit glossary.csv -- this file does not need to be edited  -->
 
 ```{r glossary, eval = T, echo = F}
-
-tibble(
-   # Acronym list
-   Abr =  c("Acronym A",
-            "Acronym B",
-            "Acronym C"
-   ),
-   # Acronim definition
-   Meaning = c(
-      "Deffinition of A",
-      "Deffinition of B",
-      "Deffinition of C"
-   )
-) %>% 
+readr::read_csv(here::here('glossary.csv')) %>% 
 dplyr::arrange(Abr) %>%
   kable("latex",
   booktabs = T,
