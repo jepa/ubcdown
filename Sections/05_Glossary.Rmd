@@ -10,7 +10,7 @@ output:
 
 <!-- Edit glossary.csv -- this file does not need to be edited  -->
 
-```{r glossary, eval = T, echo = F}
+```{r glossary, eval = T, echo = F, message = FALSE}
 readr::read_csv(here::here('glossary.csv')) %>% 
 dplyr::arrange(Abr) %>%
   kable("latex",
