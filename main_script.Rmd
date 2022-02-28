@@ -17,7 +17,7 @@ header-includes:
    - \usepackage{wrapfig}
    - \usepackage{pdfpages}
 bibliography: ./References/reference_list.bib
-csl: ./References/reference_format.csl
+csl: ./References/reference_format-Vancouver.csl
 link-citations: yes
 linkcolor: black
 ---
