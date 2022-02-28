@@ -16,6 +16,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend odio odi
 
 ## Referencing figures
 
+### Basics
+
 This text will render with a figure referenced (Figure \@ref(fig:figureTitle)).
 
 ```{r figureTitle, eval = T, echo = T, fig.width = 3, fig.height = 2, echo=FALSE, fig.cap="This is the long caption of the figure that will apear in the main text.", fig.scap = "This is the short title for the figure list", out.extra=''}
@@ -27,3 +29,26 @@ img <- readPNG("../Images/Professortocat.png")
 grid.raster(img)
 ```
 
+### Text-references for figure captions
+
+You may need to use citations or special characters in a figure caption, which is not possible by writing the caption directly in the code chunk `fig.cap` option. Instead, you will need to use [in-text references](https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html#text-references).
+
+How to use in-text references:
+
+1. in the `fig.cap` code chunk option, write `"(ref:TEXT-REFERENCE)"`
+2. outside of code chunk (in the text), start a paragraph with `(ref:TEXT-REFERENCE) ...` then write your caption
+
+Note: "TEXT-REFERENCE" can be replace with whatever, I suggest something descriptive like "figureTitle-cap"
+
+Example:
+
+(ref:introfig1-cap) This caption was written with an in-text reference. See how I can use citations like this and **special** *characters* _!?@#, which normally would not be possible.
+
+```{r figureTitle, eval = T, echo = T, fig.width = 3, fig.height = 2, echo=FALSE, fig.cap="(ref:introfig1-cap)", fig.scap = "This is the short title for the figure list", out.extra=''}
+
+# Call the image
+img <- readPNG("../Images/Professortocat.png")
+
+# Print the image
+grid.raster(img)
+```
