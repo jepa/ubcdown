@@ -149,7 +149,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 
 \clearpage
 
-# Chapter One: Introduction
+# Introduction
 
 <!-- Set Numbering properly for rest of the document -->
 \pagenumbering{arabic}
@@ -172,7 +172,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 <!-- From here on, include your different data chapters using normal Rmarkdown titles -->
 
 <!-- Modify me! -->
-# Chapter Two: Insert Title Chapter Here 
+# Insert Title Chapter Here 
 
 <!-- Set figure and table numbering according to the chapter -->
 \renewcommand{\thefigure}{2.\arabic{figure}}
@@ -188,7 +188,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \clearpage
 
 <!-- Modify me! -->
-# Chapter Three: Insert Title Chapter Here
+# Insert Title Chapter Here
 
 <!-- Set figure and table numbering according to the chapter -->
 \renewcommand{\thefigure}{3.\arabic{figure}}
@@ -204,7 +204,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \clearpage
 
 <!-- Modify me! -->
-# Chapter Four: Insert Title Chapter Here
+# Insert Title Chapter Here
 
 <!-- Set figure and table numbering according to the chapter -->
 \renewcommand{\thefigure}{4.\arabic{figure}}
@@ -220,7 +220,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \clearpage
 
 <!-- Modify me! -->
-# Chapter Five: Insert Title Chapter Here
+# Insert Title Chapter Here
 
 <!-- Set figure and table numbering according to the chapter -->
 \renewcommand{\thefigure}{5.\arabic{figure}}
