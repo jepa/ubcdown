@@ -43,3 +43,9 @@ University Examiner
 
 \noindent\underline{\makebox[6in][l]{Name of External Examiner}}  
 External Examiner
+
+<!-- Committee members that did not attend the defence -->
+**Additional Supervisory Committee Members:**
+
+\noindent\underline{\makebox[6in][l]{Name of your Committee Member}}  
+Supervisory Committee Member
