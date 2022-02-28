@@ -98,6 +98,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 
 \phantomsection <!-- This will correct the bookmarks paging (See issue #4)  -->
 \addcontentsline{toc}{section}{Table of Contents}
+\renewcommand*\contentsname{Table of Contents}
 
 \thispagestyle{empty}
 \begin{singlespace}
