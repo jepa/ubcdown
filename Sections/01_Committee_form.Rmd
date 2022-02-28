@@ -30,7 +30,7 @@ in \noindent\underline{\makebox[5.8in][l]{Insert Program}}
 **Examining Committee:**
 
 \noindent\underline{\makebox[6in][l]{Name of your Supervisor}}  
-Research Supervisor
+Supervisor
 
 \noindent\underline{\makebox[6in][l]{Name of your Committee Member}}  
 Supervisory Committee Member 
