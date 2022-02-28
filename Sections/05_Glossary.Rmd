@@ -25,12 +25,16 @@ tibble(
       "Deffinition of C"
    )
 ) %>% 
-   dplyr::arrange(Abr) %>%
-   kable("latex",
-   booktabs = T,
-   col.names = NULL) %>%
-   kable_styling(full_width = T) %>%
-   column_spec(1, width = "2cm") %>%  # Size of first column
-   column_spec(1, bold = T) # Abbreviation bold
+dplyr::arrange(Abr) %>%
+  kable("latex",
+  booktabs = T,
+  col.names = NULL,
+  longtable = TRUE) %>% # needed if glossary extends one page
+  
+  column_spec(1, width = "2cm") %>%  # Size of first column
+  column_spec(1, bold = T) %>% # Abbreviation bold 
+  
+  sub("\\\\toprule", "", .) %>% # removes top border
+  sub("\\\\bottomrule", "", .) # removes bottom border
 
 ```
