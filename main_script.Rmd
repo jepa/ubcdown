@@ -16,6 +16,7 @@ header-includes:
    - \floatplacement{figure}{H} 
    - \usepackage{wrapfig}
    - \usepackage{pdfpages}
+   - \usepackage{caption} # allows setting caption width for tables
 bibliography: ./References/reference_list.bib
 csl: ./References/reference_format-Vancouver.csl
 link-citations: yes
