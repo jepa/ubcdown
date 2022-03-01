@@ -173,7 +173,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 <!-- From here on, include your different data chapters using normal Rmarkdown titles -->
 
 <!-- Modify me! -->
-# Insert Title Chapter Here 
+# Insert Title of Chapter 2 Here 
 
 <!-- Set figure and table numbering according to the chapter -->
 \renewcommand{\thefigure}{2.\arabic{figure}}
@@ -189,7 +189,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \clearpage
 
 <!-- Modify me! -->
-# Insert Title Chapter Here
+# Insert Title of Chapter 3 Here
 
 <!-- Set figure and table numbering according to the chapter -->
 \renewcommand{\thefigure}{3.\arabic{figure}}
@@ -205,7 +205,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \clearpage
 
 <!-- Modify me! -->
-# Insert Title Chapter Here
+# Insert Title of Chapter 4 Here
 
 <!-- Set figure and table numbering according to the chapter -->
 \renewcommand{\thefigure}{4.\arabic{figure}}
@@ -221,7 +221,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \clearpage
 
 <!-- Modify me! -->
-# Insert Title Chapter Here
+# Insert Title of Chapter 5 Here
 
 <!-- Set figure and table numbering according to the chapter -->
 \renewcommand{\thefigure}{5.\arabic{figure}}
@@ -238,7 +238,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 
 <!-- Done with data chapters, last sections -->
 
-# Synthesis and Conclusion
+# Conclusion
 
 ```{r Conclusion, child = './Sections/09_Conclusion.Rmd', eval = T}
 ```
