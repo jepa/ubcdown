@@ -1,10 +1,10 @@
 # A **non-official** template to write your PhD. dissertation at the University of British Columbia using *R* and *rmarkdown*
 
-This repository provides a template for writing a PhD dissertation in R Markdown, and rendering those files into a PDF formatted according to [the requirements of the Faculty of Graduate and Postdoctoral Studies of the University of British Columbia](https://www.grad.ubc.ca/current-students/dissertation-thesis-preparation). Note that **this is not an official template and thus, does not guarantee a successful submission.** It follows the 2021 requirements to convert R Markdown files into a PDF formatted ready for submission at UBC. The faculty of G+PS has a relative flexible format so, as a reference, the current template will generate a PDF similar to [Palacios-Abrantes, 2021](https://open.library.ubc.ca/cIRcle/collections/ubctheses/24/items/1.0396646) (You can also see the `dissertation_template.pdf` file). This project has drawn directly on code and ideas from Dan Ovando's [gauchodown](https://github.com/DanOvando/gauchodown), with the modifications needed to deal with UBC's G+PS requirements. However, unlike `gouchodown`, this is not a [bookdown](https://github.com/rstudio/bookdown)-like package but a simple repository that you download and modify with your information.
+This repository provides a template for writing a PhD dissertation in R Markdown, and rendering those files into a PDF formatted according to [the requirements of the Faculty of Graduate and Postdoctoral Studies of the University of British Columbia](https://www.grad.ubc.ca/current-students/dissertation-thesis-preparation). Note that **this is not an official template and thus, does not guarantee a successful submission.** It follows the 2022 requirements to convert R Markdown files into a PDF formatted ready for submission at UBC. The faculty of G+PS has a relative flexible format so, as a reference, the current template will generate a PDF similar to [Palacios-Abrantes, 2021](https://open.library.ubc.ca/cIRcle/collections/ubctheses/24/items/1.0396646) (You can also see the `dissertation_template.pdf` file). This project has drawn directly on code and ideas from Dan Ovando's [gauchodown](https://github.com/DanOvando/gauchodown), with the modifications needed to deal with UBC's G+PS requirements. However, unlike `gouchodown`, this is not a [bookdown](https://github.com/rstudio/bookdown)-like package but a simple repository that you download and modify with your information.
 
 Currently, the repository only renders a fully edited PDF as required by G+PS and I have no plans to expand this in the future. The word version is useful for revisions and keeping track changes, but it does not render a final formatted version.
 
-This repository is inteded for those with some experience using R, R-projects and `rmarkdown` with `child` chunks, but no LaTex knowledge is required. I provide very basic information on `bookdown` and `rmarkdown` here, if you are new to working with these packages, please read over the documentation available in [bookdown book](https://bookdown.org/yihui/bookdown/). There are also numerous `rmarkdown` tuttorials online like those offered by the UBC IOF-based Mozilla study group [Deep Sea Data Squad](https://github.com/jepa/studyGroup/tree/gh-pages/lessons/R_Markdown) or the UCSB-based [eco-data-science](https://github.com/eco-data-science/eco-data-science.github.io). See also the [Related projects](https://github.com/jepa/ubcdown/blob/main/README.md#related-projects) section at the bottom of this page.
+This repository is intended for those with some experience using R, R-projects and `rmarkdown` with `child` chunks. A small amount of LaTex knowledge will be necessary, for example for in-text references, but this template was made so that 95-100% of the work can be done without diving into the intricacies of LaTex. I provide very basic information on `bookdown` and `rmarkdown` here, if you are new to working with these packages, please read over the documentation available in [bookdown book](https://bookdown.org/yihui/bookdown/). There are also numerous `rmarkdown` tutorials online like those offered by the UBC IOF-based Mozilla study group [Deep Sea Data Squad](https://github.com/jepa/studyGroup/tree/gh-pages/lessons/R_Markdown) or the UCSB-based [eco-data-science](https://github.com/eco-data-science/eco-data-science.github.io). See also the [Related projects](https://github.com/jepa/ubcdown/blob/main/README.md#related-projects) section at the bottom of this page.
 
 ## Using ubcdown to write your dissertation
 
@@ -17,25 +17,26 @@ From here on, the instructions below are the same regardless of the method you c
 
 ### Initial setup
 
-Using **ubcdown** has some prerequisites, such as Pandoc and LaTeX. To compile PDF documents using **R**, you need to have Pandoc, LaTeX and several related packages installed. If you have a recent version of [RStudio](http://www.rstudio.com/products/rstudio/download/), then you already have Pandoc and don't need to do anything more about that. Next is LaTeX. By far the easiest way to install LaTeX on any platform is with the [`tinytex`](https://yihui.name/tinytex/) package. Finally, there are some other packages that we will use in some sections of the dissertation, these are [`knirt`](https://cran.r-project.org/web/packages/knitr/index.html) , [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) , [`dplyr`](https://dplyr.tidyverse.org/), [`tibble`](https://tibble.tidyverse.org/)
+Using **ubcdown** has some prerequisites, such as Pandoc and LaTeX. To compile PDF documents using **R**, you need to have Pandoc, LaTeX and several related packages installed. If you have a recent version of [RStudio](http://www.rstudio.com/products/rstudio/download/), then you already have Pandoc and don't need to do anything more about that. Next is LaTeX. By far the easiest way to install LaTeX on any platform is with the [`tinytex`](https://yihui.name/tinytex/) package. Finally, there are some other packages that we will use in some sections of the dissertation, these are [`knitr`](https://cran.r-project.org/web/packages/knitr/index.html) , [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) , [`dplyr`](https://dplyr.tidyverse.org/), [`tibble`](https://tibble.tidyverse.org/),
+[`readr`](https://readr.tidyverse.org/), [`here`](https://here.r-lib.org/)
 
 ```
-install.packages(c('tinytex', 'rmarkdown', "knitr", "kableExtra","png","grid","dplyr","tibble"))
+install.packages(c('tinytex', 'rmarkdown', "knitr", "kableExtra","png","grid","dplyr","tibble", "readr", "here"))
 tinytex::install_tinytex()
 # after restarting RStudio, confirm that you have LaTeX with 
 tinytex:::is_tinytex()
 ```
 
-If you are getting an error message “destination /usr/local/bin not writable” you can see the following [`tidytex`](https://github.com/yihui/tinytex/issues/24) issue.
+If you are getting an error message “destination /usr/local/bin not writable” you can see the following [`tinytex`](https://github.com/yihui/tinytex/issues/24) issue.
 
 
-Note that this template was created using `R version 3.5.2 (2018-12-20) -- "Eggshell Igloo"`  and tested in `R version 4.0.4 (2021-02-15) -- "Lost Library Book"` 
+Note that this template was created and tested using `R version 4.1.1 (2021-08-10) -- "Eggshell Igloo"`.
 
 ### Starting to write your dissertation
 
-To use `gauchodown` from [RStudio](http://www.rstudio.com/products/rstudio/download/):
+To use `ubcdown` from [RStudio](http://www.rstudio.com/products/rstudio/download/):
 
-1) Ensure that you have already installed LaTeX and the fonts described above, and are using the latest version of [RStudio](http://www.rstudio.com/products/rstudio/download/). You can use `gauchodown` without RStudio. For example, you can write the Rmd files in your favourite text editor (e.g. [Atom](https://atom.io/), [Notepad++](https://notepad-plus-plus.org/)). But RStudio is probably the easiest tool for writing both R code and text in your dissertation. 
+1) Ensure that you have already installed LaTeX and the fonts described above, and are using the latest version of [RStudio](http://www.rstudio.com/products/rstudio/download/). You can use `ubcdown` without RStudio. For example, you can write the Rmd files in your favourite text editor (e.g. [Atom](https://atom.io/), [Notepad++](https://notepad-plus-plus.org/)). But RStudio is probably the easiest tool for writing both R code and text in your dissertation. 
 
 2) Install the `bookdown` package: 
 

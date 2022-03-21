@@ -16,8 +16,11 @@ header-includes:
    - \floatplacement{figure}{H} 
    - \usepackage{wrapfig}
    - \usepackage{pdfpages}
+   - \usepackage{caption} # allows setting caption width for tables
 bibliography: ./References/reference_list.bib
-csl: ./References/reference_format.csl
+csl: ./References/reference_format-Vancouver.csl
+link-citations: yes
+linkcolor: black
 ---
 
 
@@ -35,7 +38,7 @@ library("knitr")
 library("kableExtra")
 library("dplyr")
 library("tibble")
-
+library("readr")
 
 
 ```
@@ -98,6 +101,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 
 \phantomsection <!-- This will correct the bookmarks paging (See issue #4)  -->
 \addcontentsline{toc}{section}{Table of Contents}
+\renewcommand*\contentsname{Table of Contents}
 
 \thispagestyle{empty}
 \begin{singlespace}
@@ -146,7 +150,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 
 \clearpage
 
-# Chapter One: Introduction
+# Introduction
 
 <!-- Set Numbering properly for rest of the document -->
 \pagenumbering{arabic}
@@ -169,7 +173,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 <!-- From here on, include your different data chapters using normal Rmarkdown titles -->
 
 <!-- Modify me! -->
-# Chapter Two: Insert Title Chapter Here 
+# Insert Title of Chapter 2 Here 
 
 <!-- Set figure and table numbering according to the chapter -->
 \renewcommand{\thefigure}{2.\arabic{figure}}
@@ -185,7 +189,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \clearpage
 
 <!-- Modify me! -->
-# Chapter Three: Insert Title Chapter Here
+# Insert Title of Chapter 3 Here
 
 <!-- Set figure and table numbering according to the chapter -->
 \renewcommand{\thefigure}{3.\arabic{figure}}
@@ -201,7 +205,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \clearpage
 
 <!-- Modify me! -->
-# Chapter Four: Insert Title Chapter Here
+# Insert Title of Chapter 4 Here
 
 <!-- Set figure and table numbering according to the chapter -->
 \renewcommand{\thefigure}{4.\arabic{figure}}
@@ -217,7 +221,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \clearpage
 
 <!-- Modify me! -->
-# Chapter Five: Insert Title Chapter Here
+# Insert Title of Chapter 5 Here
 
 <!-- Set figure and table numbering according to the chapter -->
 \renewcommand{\thefigure}{5.\arabic{figure}}
@@ -234,7 +238,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 
 <!-- Done with data chapters, last sections -->
 
-# Synthesis and Conclusion
+# Conclusion
 
 ```{r Conclusion, child = './Sections/09_Conclusion.Rmd', eval = T}
 ```
@@ -263,11 +267,9 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 <!-- # Appendices -->
 \section*{Appendices}
 \addcontentsline{toc}{section}{Appendices} 
+\setcounter{secnumdepth}{0} <!-- remove numbering for appendices -->
 
-<!-- ## Appendix A -->
-
-\section*{Appendix A - Supplementary information for "Name of Chapter Two"}
-\addcontentsline{toc}{section}{Appendix A}
+## Appendix A - Supplementary information for Chapter Two
 
 <!-- Set Figure, table and equations numbering according to the chapter -->
 \renewcommand{\thefigure}{A2.\arabic{figure}}
@@ -277,15 +279,10 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \renewcommand{\theequation}{A2.\arabic{equation}}
 \setcounter{equation}{0}
 
-
 ```{r appendix_a, child = '~/GitHub/FishForVisa/Scripts/supplements.Rmd', eval = F}
 ```
 
-
-<!-- ## Appendix B  -->
-
-\section*{Appendix B - Supplementary information for "Name of Chapter Three"}
-\addcontentsline{toc}{section}{Appendix B}
+## Appendix B - Supplementary information for Chapter Three
 
 <!-- Set Figure, table and equations numbering according to the chapter -->
 \renewcommand{\thefigure}{A3.\arabic{figure}}
@@ -295,15 +292,10 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \renewcommand{\theequation}{A3.\arabic{equation}}
 \setcounter{equation}{0}
 
-
 ```{r appendix_b, child = '~/GitHub/TransEmergence/Scripts/Supplements.Rmd', eval = F}
 ```
 
-<!-- ## Appendix C -->
-
-\section*{Appendix C - Supplementary information for "Name of Chapter Four"}
-\addcontentsline{toc}{section}{Appendix C}
-
+## Appendix C - Supplementary information for Chapter Four
 
 <!-- Set Figure, table and equations numbering according to the chapter -->
 \renewcommand{\thefigure}{A4.\arabic{figure}}
@@ -313,9 +305,7 @@ NOTE: Remove normal markdown chapters before rendering to PDF  -->
 \renewcommand{\theequation}{A4.\arabic{equation}}
 \setcounter{equation}{0}
 
-
 ```{r appendix_c, child = '~/GitHub/OC_Transboundary/Ecol/Supplements.Rmd', eval = F}
 ```
-
 
 <!-- END OF SCRIPT -->
