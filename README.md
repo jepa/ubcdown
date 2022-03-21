@@ -29,8 +29,10 @@ tinytex:::is_tinytex()
 
 If you are getting an error message “destination /usr/local/bin not writable” you can see the following [`tinytex`](https://github.com/yihui/tinytex/issues/24) issue.
 
-
-Note that this template was created and tested using `R version 4.1.1 (2021-08-10) -- "Eggshell Igloo"`.
+Note that this template was created using `R version 3.5.2 (2018-12-20) -- "Eggshell Igloo"`  and tested in
+- `R version 4.0.4 (2021-02-15) -- "Lost Library Book"` 
+- `R version 4.1.1 (2021-08-10) -- "Camp Pontanezen"`
+ 
 
 ### Starting to write your dissertation
 
